@@ -1,0 +1,17 @@
+.smex-items
+.emacs.desktop.*
+.mc-lists.el
+ac-comphist.dat
+eshell/
+*~$
+places
+.recentf
+ido.last
+bookmarks
+cider-history
+cider-history
+projectile-bookmarks.eld
+projectile.cache
+auto-save-list
+backups
+elpa/
