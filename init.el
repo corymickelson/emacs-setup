@@ -10,7 +10,7 @@
              '("tromey" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives 
+(add-to-list 'package-archives
               '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
 (add-to-list 'package-pinned-packages '(clj-refactor . "melpa-stable") t)
@@ -34,8 +34,7 @@
 ;; manually with M-x package-install
 ;; Add in your own as you wish:
 (defvar my-packages
-  '(ac-js2
-    ag
+  '(ag
     ample-regexps
     async auto-complete
     cider
@@ -46,30 +45,22 @@
     company
     company-ghc
     company-racer
-    company-tern
-    dash
-    csharp-mode
-    omnisharp
-    fsharp-mode
     epl
     evil
     evil-iedit-state
     exec-path-from-shell
     flycheck
-    flycheck-haskell
     flycheck-clojure
+    flycheck-haskell
     flycheck-pos-tip
     flycheck-rust
-    ghc
     git-commit
+    ghc
     goto-chg
     haskell-mode
     ido-ubiquitous
     iedit
     inflections
-    js2-closure
-    js2-mode
-    js2-refactor
     let-alist
     magit
     magit-popup
@@ -88,8 +79,6 @@
     smex
     spinner
     tagedit
-    tern
-    tern-auto-complete
     ujelly-theme
     undo-tree
     wgrep-ag
@@ -125,8 +114,6 @@
 ;; a .yml file
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
-(setq omnisharp-server-executable-path "/Users/corymickelson/Resources/roslyn/scripts/Omnisharp")
-
 ;;;;
 ;; Customization
 ;;;;
@@ -140,8 +127,8 @@
 (add-to-list 'load-path "~/.emacs.d/neotree")
 
 ;; web beautifier
-(add-to-list 'load-path "~/.emacs.d/web-beautify")
-(load "web-formatter.el")
+;;(add-to-list 'load-path "~/.emacs.d/web-beautify")
+;;(load "web-formatter.el")
 
 
 ;; Sets up exec-path-from-shell so that Emacs will use the correct
@@ -167,10 +154,8 @@
 
 ;; Langauage-specific
 (load "setup-rust.el")
-(load "setup-js.el")
-(load "setup-csharp.el")
-(load "setup-haskell.el")
 (load "setup-clojure.el")
+(load "setup-haskell.el")
 
 
 (evil-mode 1)
@@ -188,7 +173,10 @@
  '(custom-safe-themes
    (quote
     ("9e54a6ac0051987b4296e9276eecc5dfb67fdcd620191ee553f40a9b6d943e78" default)))
- '(fci-rule-color "#282a2e"))
+ '(fci-rule-color "#282a2e")
+ '(package-selected-packages
+   (quote
+    (flycheck-haskell wgrep-ag ujelly-theme tagedit smex simple-httpd rainbow-delimiters racer projectile magit ido-ubiquitous flycheck-rust flycheck-pos-tip flycheck-clojure exec-path-from-shell evil-iedit-state company-racer company-ghc cm-mode clojure-mode-extra-font-locking clj-refactor auto-complete ample-regexps ag))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

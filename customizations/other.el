@@ -23,10 +23,9 @@
 
 ;; flycheck
 (require 'flycheck)
-(eval-after-load 'flycheck
-  '(setq flycheck-display-errors-function #'flycheck-pos-tip-error-messages))
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
-
+(with-eval-after-load 'flycheck
+  (flycheck-pos-tip-mode))
 (provide 'other)
 ;;; other.el ends here

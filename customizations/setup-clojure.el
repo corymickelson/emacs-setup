@@ -3,7 +3,7 @@
 ;;;;
 
 ;; Enable paredit for Clojure
-(add-hook 'clojure-mode-hook 'enable-paredit-mode)
+(add-hook 'clojure-mode-hook #'enable-paredit-mode)
 
 ;; This is useful for working with camel-case tokens, like names of
 ;; Java classes (e.g. JavaClassName)
@@ -39,7 +39,7 @@
 ;;;;
 
 ;; provides minibuffer documentation for the code you're typing into the repl
-(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+;;(add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 
 ;; go right to the REPL buffer when it's finished connecting
 (setq cider-repl-pop-to-buffer-on-connect t)

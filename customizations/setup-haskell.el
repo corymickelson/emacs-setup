@@ -7,20 +7,21 @@
 (require 'evil)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
-(add-hook 'haskell-mode-hook 'structured-haskell-mode)
+;;(add-hook 'haskell-mode-hook 'structured-haskell-mode)
 
-;HaskTags
+(add-to-list 'load-path "/Users/corymickelson/.local/bin/ghc-mod")
+(add-to-list 'load-path "/Users/corymickelson/.stack/programs/x86_64-osx/ghc-8.0.1")
 
-(let ((hasktags-path (expand-file-name "/Users/corymickelson/Library/Haskell/bin")))
+(let ((hasktags-path (expand-file-name "/Users/corymickelson/.local/bin")))
   (setenv "PATH" (concat hasktags-path path-separator (getenv "PATH")))
   (add-to-list 'exec-path hasktags-path))
 (custom-set-variables '(haskell-tags-on-save t))
 
-; Uncomment if not using stack for haskell projects
-;(custom-set-variables '(haskell-process-type 'cabal-repl))
-(custom-set-variables '(haskell-process-type 'stack-ghci))
+(let ((my-stack-path (expand-file-name "/Users/corymickelson/.local/bin")))
+  (setenv "PATH" (concat my-stack-path ":" (getenv "PATH")))
+  (add-to-list 'exec-path my-stack-path))
 
-(add-to-list 'load-path "/Users/corymickelson/Library/Haskell/share/ghc-7.10.2-x86_64")
+(custom-set-variables '(haskell-process-type 'stack-ghci))
 
 (autoload 'ghc-init "ghc" nil t)
 (autoload 'ghc-debug "ghc" nil t)
