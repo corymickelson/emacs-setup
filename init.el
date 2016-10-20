@@ -12,8 +12,12 @@
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives
               '("melpa-stable" . "http://stable.melpa.org/packages/"))
+(add-to-list
+  'package-archives
+  '("melpa-default" . "http://melpa.org/packages/") t)
 
 (add-to-list 'package-pinned-packages '(clj-refactor . "melpa-stable") t)
+(add-to-list 'package-pinned-packages '(intero . "melpa-default") t)
 (package-initialize)
 (when (not package-archive-contents)
   (package-refresh-contents))
@@ -47,6 +51,7 @@
     ido-ubiquitous
     iedit
     inflections
+    intero
     let-alist
     magit
     magit-popup
