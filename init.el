@@ -1,5 +1,6 @@
 ;;; Package --- Summary
 ;;; Commentary:
+;;; Haskell is setup with intero to use ghc-mod uncomment uncommented out packages
 ;;; Code:
 
 ;; Define package repositories
@@ -24,14 +25,15 @@
 (defvar my-packages
   '(ag
     ample-regexps
-    async auto-complete
+    async
+    ;; auto-complete
     cider
     clojure-mode
     clj-refactor
     clojure-mode-extra-font-locking
     cm-mode
     company
-    company-ghc
+    ;; company-ghc
     company-racer
     epl
     elm-mode
@@ -41,11 +43,11 @@
     f
     flycheck
     flycheck-clojure
-    flycheck-haskell
+    ;; flycheck-haskell
     flycheck-pos-tip
     flycheck-rust
     git-commit
-    ghc
+    ;; ghc
     goto-chg
     haskell-mode
     ido-ubiquitous
