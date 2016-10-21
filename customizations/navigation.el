@@ -2,11 +2,10 @@
 
 ;;; Commentary:
 
-;;; Code:
-
 ;; These customizations make it easier for you to navigate files,
 ;; switch buffers, and choose options from the minibuffer.
 
+;;; Code:
 
 ;; "When several buffers visit identically-named files,
 ;; Emacs must give the buffers distinct names. The usual method
@@ -16,12 +15,18 @@
 ;; name at the beginning of the buffer name
 ;; https://www.gnu.org/software/emacs/manual/html_node/emacs/Uniquify.html
 (require 'uniquify)
+
+(require 'recentf)
+
+(require 'neotree)
+
+(require 'smex)
+
 (setq uniquify-buffer-name-style 'forward)
 
 ;; Turn on recent file mode so that you can more easily switch to
 ;; recently edited files when you first start emacs
 (setq recentf-save-file (concat user-emacs-directory ".recentf"))
-(require 'recentf)
 (recentf-mode 1)
 (setq recentf-max-menu-items 40)
 
@@ -59,7 +64,6 @@
 ;; Enhances M-x to allow easier execution of commands. Provides
 ;; a filterable list of possible commands in the minibuffer
 ;; http://www.emacswiki.org/emacs/Smex
-(require 'smex)
 (setq smex-save-file (concat user-emacs-directory ".smex-items"))
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
@@ -68,7 +72,6 @@
 (projectile-global-mode)
 
 ;; NeoTree
-(require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
 
 (add-hook 'neotree-mode-hook

@@ -1,0 +1,142 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/corymickelson/Source/Prototypes/informant/public/" . "src/")
+ ("/Users/corymickelson/Source/Prototypes/informant/" . "public/")
+ ("/Users/corymickelson/Source/Prototypes/" . "informant/")
+ ("/Users/corymickelson/.emacs.d/elpa/" . "intero-20161020.340/")
+ ("/Users/corymickelson/Source/Academic/CTwo/solo/src/" . "solo/")
+ ("/Users/corymickelson/Source/Academic/CTwo/solo/" . "src/")
+ ("/Users/corymickelson/Source/Academic/HOne/simple/" . "src/")
+ ("/Users/corymickelson/Source/Academic/HOne/" . "simple/")
+ ("/Users/corymickelson/Source/Academic/CTwo/" . "emergency-exit/")
+ ("/Users/" . "corymickelson/")
+ ("/" . "Users/")
+ ("/Users/corymickelson/.emacs.d/" . "themes/")
+ ("/Users/corymickelson/Source/Academic/console/src/elm/" . "Components/")
+ ("/Users/corymickelson/Source/Academic/console/src/" . "elm/")
+ ("/Users/corymickelson/Source/Academic/console/" . "src/")
+ ("/Users/corymickelson/Source/Academic/simple/" . "app/")
+ ("/Users/corymickelson/Source/Academic/" . "HOne/")
+ ("/Users/corymickelson/Source/" . "Prototypes/")
+ ("/Users/corymickelson/" . "Source/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/corymickelson/.emacs.d/themes/"
+ "/Users/corymickelson/.emacs.d/customizations/"
+ "/Users/corymickelson/Source/Prototypes/informant/public/src/"
+ "/Users/corymickelson/Source/Prototypes/informant/api/"
+ "/Users/corymickelson/.emacs.d/elpa/intero-20161020.340/"
+ "/Users/corymickelson/.emacs.d/"
+ "/Users/corymickelson/Source/Academic/HOne/simple/src/"
+ "/Users/corymickelson/Source/Academic/CTwo/solo/src/solo/"
+ "/Users/corymickelson/Source/Academic/HOne/simple/app/"
+ "/Users/corymickelson/Source/Academic/CTwo/emergency-exit/"
+ "/Users/corymickelson/Source/Academic/CTwo/solo/"
+ "/Users/corymickelson/Source/Academic/simple/app/"
+ "/Users/corymickelson/Source/Academic/simple/src/"
+ "/Users/corymickelson/Source/Academic/console/src/elm/Components/"
+ "/Users/corymickelson/Source/Academic/console/"
+ "/Users/corymickelson/Source/Academic/console/src/elm/"
+ "/Users/corymickelson/Source/Academic/minimist/"
+ "/Users/corymickelson/Source/Academic/pipeworks/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "blackboard.el"
+ "ui.el"
+ "main.js"
+ "index.js"
+ "setup-js.el"
+ "intero-pkg.el"
+ "intero-autoloads.el"
+ "intero.el"
+ "init.el"
+ "Lib.hs"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/corymickelson/.emacs.d/themes/" (22538 14359 0 0) "zenburn-theme.el" "ujelly-theme.el" "tomorrow-theme.el" "tomorrow-night-theme.el" "tomorrow-night-eighties-theme.el" "tomorrow-night-bright-theme.el" "tomorrow-night-blue-theme.el" "leuven-theme.el" "flatui-theme.el" "color-theme-tomorrow.el" "blackboard.el" "ample-zen-theme.el" "../" "./")
+
+ ("/Users/corymickelson/.emacs.d/customizations/" (22538 14376 0 0) "web-formatter.el" "ui.el" "shell-integration.el" "setup-rust.el" "setup-js.el" "setup-haskell.el" "setup-elm.el" "setup-csharp.el" "setup-clojure.el" "other.el" "navigation.el" "elisp-editing.el" "editing.el" "../" "./")
+
+ ("/Users/corymickelson/.emacs.d/" (22538 13853 0 0) "web-beautify/" "themes/" "README.md" "projectile-bookmarks.eld" "network-security.data" "neotree/" "init.el" "ido.last" "elpa/" "customizations/" "cider-history" "backups/" "auto-save-list/" ".smex-items" ".recentf" ".gitignore" ".git/" ".emacs.desktop.lock" ".emacs.desktop" "../" "./")
+
+ ("/Users/corymickelson/Source/Prototypes/informant/public/src/" (22496 9703 0 0) "utilities/" "services/" "main.js" "components/" "../" "./")
+
+ ("/Users/corymickelson/Source/Prototypes/informant/public/" (22493 52422 0 0) "src/" "README.md" "package.json" "node_modules/" "LICENSE.md" "index.html" "bin/" "../" "./")
+
+ ("/Users/corymickelson/Source/Prototypes/informant/api/" (22537 21192 0 0) "README.md" "package.json" "index.zip" "index.js" "dist/" "configurations/" "bin/" ".tern-port" ".DS_Store" "../" "./")
+
+ ("/Users/corymickelson/Source/Prototypes/informant/" (22493 51795 0 0) "public/" "api/" ".idea/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/corymickelson/Source/Prototypes/" (22534 18699 0 0) "signer/" "informant/" ".DS_Store" "../" "./")
+
+ ("/Users/corymickelson/" (22537 20270 0 0) "Source/" "Public/" "Pictures/" "Music/" "Movies/" "Library/" "Downloads/" "Documents/" "Desktop/" "Applications (Parallels)/" "Applications/" ".yo-rc-global.json" ".yjp/" ".yarn-config/" ".yarn-cache/" ".yarn/" ".wget-hsts" ".viminfo" ".vim/" ".vagrant.d/" ".Trash/" ".subversion/" ".stagehand" ".stack/" ".ssh/" ".pub-cache/" ".pdfbox.cache" ".oracle_jre_usage/" ".nvm/" ".npm/" ".node_repl_history" ".node-gyp/" ".m2/" ".local/" ".lein/" ".jspm/" ".hyper_plugins/" ".hyper.js.save" ".hyper.js" ".gsutil/" ".gnupg/" ".gitkraken/" ".gitconfig" ".ghc-mod/" ".ghc/" ".eslintrc.json" ".emacs.d/" ".elm/" ".electron/" ".DS_Store" ".dotnet/" ".dartServer/" ".cups/" ".config/" ".CFUserTextEncoding" ".cargo/" ".cache/" ".boot/" ".bashrc" ".bash_sessions/" ".bash_profile" ".bash_history" ".aws/" ".atom/" "../" "./")
+
+ ("/Users/corymickelson/.emacs.d/elpa/" (22537 21057 0 0) "yasnippet-20160924.2001/" "with-editor-20161009.917/" "wgrep-ag-20160923.403/" "wgrep-20141016.1656/" "undo-tree-20161012.701/" "ujelly-theme-20160722.1850/" "typed-clojure-mode-20151003.1122/" "tern-auto-complete-20160906.1204/" "tern-20160817.522/" "tagedit-20160516.754/" "spinner-1.7.1/" "smex-20151212.1409/" "simple-httpd-20160902.1800/" "seq-2.16/" "s-20160928.636/" "rust-mode-20160909.935/" "rainbow-delimiters-20160430.2358/" "racer-20161017.1829/" "queue-0.1.1/" "projectile-20161008.47/" "pos-tip-20150318.813/" "popup-20160709.729/" "pkg-info-20150517.443/" "peg-20150707.2341/" "paredit-20160615.1325/" "multiple-cursors-20160719.216/" "magit-popup-20161009.1506/" "magit-20161019.2021/" "js2-refactor-20161019.911/" "js2-mode-20161016.156/" "intero-20161020.340/" "inflections-20161017.157/" "iedit-20160927.1726/" "ido-ubiquitous-20160623.815/" "ido-completing-read+-20160623.815/" "hydra-20160913.216/" "haskell-mode-20161010.118/" "goto-chg-20131228.659/" "git-commit-20161011.1738/" "ghc-20160808.813/" "flycheck-rust-20161019.1103/" "flycheck-pos-tip-20160323.129/" "flycheck-haskell-20160524.117/" "flycheck-clojure-20160704.1221/" "flycheck-20161018.1343/" "f-20161002.800/" "exec-path-from-shell-20160812.159/" "evil-iedit-state-20160905.1908/" "evil-20160827.1510/" "epl-20150517.433/" "elm-mode-20161006.11/" "edn-20160215.419/" "deferred-20160109.2046/" "dash-20161018.136/" "company-racer-20160722.1658/" "company-ghc-20160315.710/" "company-20160829.1206/" "cm-mode-20160914.148/" "clojure-mode-extra-font-locking-20160307.414/" "clojure-mode-20161017.1134/" "clj-refactor-2.2.0/" "cider-20161016.424/" "auto-complete-20160827.649/" "async-20161010.2322/" "archives/" "ample-regexps-20151023.300/" "ag-20160731.1323/" "../" "./")
+
+ ("/Users/corymickelson/.emacs.d/elpa/tern-auto-complete-20160906.1204/" (22537 21058 0 0) "tern-auto-complete.elc" "tern-auto-complete.el" "tern-auto-complete-pkg.el" "tern-auto-complete-autoloads.el" "../" "./")
+
+ ("/Users/corymickelson/.emacs.d/elpa/intero-20161020.340/" (22537 16595 0 0) "intero.elc" "intero.el" "intero-pkg.el" "intero-autoloads.el" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/HOne/simple/" (22537 1640 0 0) "test/" "stack.yaml" "src/" "simple.cabal" "Setup.hs" "LICENSE" "app/" ".stack-work/" ".idea/" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/CTwo/solo/src/solo/" (22536 61185 0 0) "service.clj" "server.clj" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/CTwo/solo/src/" (22536 61185 0 0) "solo/" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/CTwo/solo/" (22536 61375 0 0) "test/" "src/" "README.md" "project.clj" "profiles.clj" "Dockerfile" "config/" "Capstanfile" ".gitignore" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/HOne/simple/src/" (22535 38629 0 0) "Node.hs" "Lib.hs" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/HOne/simple/app/" (22534 22942 0 0) "Main.hs" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/HOne/" (22536 59195 0 0) "simple/" "console/" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/CTwo/emergency-exit/" (22536 61093 0 0) "test/" "target/" "src/" "resources/" "README.md" "project.clj" "profiles.clj" "Procfile" "log/" "env/" "Dockerfile" "Capstanfile" ".lein-repl-history" ".lein-env" ".gitignore" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/CTwo/" (22536 61185 0 0) "solo/" "emergency-exit/" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/" (22536 59205 0 0) "HOne/" "CTwo/" ".nrepl-history" ".DS_Store" "../" "./")
+
+ ("/Users/" (22517 18529 0 0) "Shared/" "Guest/" "corymickelson/" ".localized" "../" "./")
+
+ ("/Applications/" (22536 56962 0 0) "Xcode.app/" "WebStorm.app/" "Utilities/" "Time Machine.app/" "TextEdit.app/" "Temperature Gauge.app/" "System Preferences.app/" "Stickies.app/" "Slack.app/" "Siri.app/" "Safari.app/" "Reminders.app/" "QuickTime Player.app/" "Preview.app/" "Postgres.app/" "Photos.app/" "Photo Booth.app/" "Parallels Toolbox.app/" "Parallels Toolbox Tools/" "Parallels Desktop.app/" "Notes.app/" "Monity.app/" "Mission Control.app/" "Messages.app/" "Maps.app/" "Mail.app/" "Launchpad.app/" "iTunes.app/" "IntelliJ IDEA CE.app/" "Image Capture.app/" "iBooks.app/" "Google Chrome.app/" "GitKraken.app/" "Font Book.app/" "FirefoxDeveloperEdition.app/" "FileZilla.app/" "FaceTime.app/" "Emacs.app/" "DVD Player.app/" "DrCleaner.app/" "Dictionary.app/" "DataGrip.app/" "Dashboard.app/" "Dash.app/" "DaisyDisk.app/" "Contacts.app/" "CLion.app/" "Chess.app/" "Calendar.app/" "Calculator.app/" "Battery Health.app/" "Automator.app/" "App Store.app/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Applications/Emacs.app/" (22497 60735 0 0) "Contents/" "../" "./")
+
+ ("/Applications/Emacs.app/Contents/" (22497 61339 0 0) "Resources/" "PkgInfo" "MacOS/" "Info.plist" "_CodeSignature/" "../" "./")
+
+ ("/Applications/Emacs.app/Contents/Resources/" (22497 60798 0 0) "var/" "site-lisp/" "man/" "lisp/" "info/" "etc/" "English.lproj/" "Emacs.icns" "document.icns" "Credits.html" "../" "./")
+
+ ("/Applications/Emacs.app/Contents/Resources/etc/" (22497 60798 0 0) "yow.lines" "WHY-FREE" "tutorials/" "TODO" "themes/" "THE-GNU-PROJECT" "TERMS" "srecode/" "spook.lines" "ses-example.ses" "schema/" "rgb.txt" "refcards/" "README" "publicsuffix.txt.gz" "ps-prin1.ps" "ps-prin0.ps" "PROBLEMS" "package-keyring.gpg" "ORG-NEWS" "org/" "ORDERS" "NXML-NEWS" "nxml/" "NEXTSTEP" "NEWS.24" "NEWS.23" "NEWS.22" "NEWS.21" "NEWS.20" "NEWS.19" "NEWS.18" "NEWS.1-17" "NEWS" "MORE.STUFF" "MH-E-NEWS" "MACHINES" "LINUX-GNU" "JOKES" "images/" "HISTORY" "HELLO" "grep.txt" "gnus-tut.txt" "GNUS-NEWS" "gnus/" "GNU" "future-bug" "FTP" "forms/" "ETAGS.README" "ETAGS.EBNF" "ERC-NEWS" "enriched.txt" "emacs.icon" "emacs.desktop" "emacs.appdata.xml" "emacs-buffer.gdb" "edt-user.el" "e/" "DOC" "DISTRIB" "DEVEL.HUMOR" "DEBUG" "COPYING" "compilation.txt" "charsets/" "CENSORSHIP" "CALC-NEWS" "AUTHORS" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/simple/src/" (22535 38629 0 0) "Node.hs" "Lib.hs" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/console/src/elm/Components/" (22534 27264 0 0) "Hello.elm" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/console/" (22534 40651 0 0) "webpack.config.js" "src/" "README.md" "package.json" "node_modules/" "elm-stuff/" "elm-package.json" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/console/src/elm/" (22534 27264 0 0) "Main.elm" "Components/" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/console/src/" (22534 27264 0 0) "static/" "favicon.ico" "elm/" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/simple/app/" (22534 22942 0 0) "Main.hs" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/simple/" (22534 23207 0 0) "test/" "stack.yaml" "src/" "simple.cabal" "Setup.hs" "LICENSE" "app/" ".stack-work/" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/minimist/" (22534 26945 0 0) "stack.yaml" "routes" "minimist.cabal" "Main.hs" "Home.hs" "Foundation.hs" "client_session_key.aes" "Application.hs" "Add.hs" ".stack-work/" ".gitignore" ".ghci" ".dir-locals.el" "../" "./")
+
+ ("/Users/corymickelson/Source/Academic/pipeworks/" (22534 19100 0 0) "test/" "templates/" "static/" "stack.yaml" "Settings.hs" "Settings/" "pipeworks.cabal" "Import.hs" "Import/" "Handler/" "Foundation.hs" "config/" "Application.hs" "app/" ".stack-work/" ".idea/" ".gitignore" ".ghci" ".dir-locals.el" "../" "./")
+
+ ("/Users/corymickelson/Source/" (22525 29485 0 0) "SkySlope/" "resources/" "Prototypes/" "Academic/" ".DS_Store" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

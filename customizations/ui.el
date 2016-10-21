@@ -1,9 +1,9 @@
 ;;; Package --- Summary
 ;;; Commentary:
 
-    ;; These customizations change the way emacs looks and disable/enable
-    ;; some user interface elements. Some useful customizations are
-    ;; commented out, and begin with the line "CUSTOMIZE". These are more
+    ;; These customizations change the way Emacs looks and disable/enable
+    ;; some user interface elements.  Some useful customizations are
+    ;; commented out, and begin with the line "CUSTOMIZE".  These are more
     ;; a matter of preference and may require some fiddling to match your
     ;; preferences
 
@@ -35,7 +35,7 @@
 ;; for a more technical explanation.
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/themes")
-(load-theme 'zenburn t)
+(load-theme 'sanityinc-tomorrow-day t)
 
 ;; increase font size for better readability
 (set-face-attribute 'default nil :font "Monaco-11")

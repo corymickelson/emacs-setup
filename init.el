@@ -5,6 +5,9 @@
 
 ;; Define package repositories
 (require 'package)
+(add-to-list
+  'package-archives
+  '("melpa-default" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
@@ -13,15 +16,15 @@
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives
               '("melpa-stable" . "http://stable.melpa.org/packages/"))
-(add-to-list
-  'package-archives
-  '("melpa-default" . "http://melpa.org/packages/") t)
 
 (add-to-list 'package-pinned-packages '(clj-refactor . "melpa-stable") t)
 (add-to-list 'package-pinned-packages '(intero . "melpa-default") t)
+
 (package-initialize)
+
 (when (not package-archive-contents)
   (package-refresh-contents))
+
 (defvar my-packages
   '(ag
     ample-regexps
@@ -54,6 +57,8 @@
     iedit
     inflections
     intero
+    js2-mode
+    js2-refactor
     let-alist
     magit
     magit-popup
@@ -72,6 +77,7 @@
     smex
     spinner
     tagedit
+    tern-auto-complete
     typed-clojure-mode
     ujelly-theme
     undo-tree
@@ -103,16 +109,18 @@
 (add-to-list 'load-path "~/.emacs.d/neotree")
 ;;(add-to-list 'load-path "~/.emacs.d/web-beautify")
 ;;(load "web-formatter.el")
+(load "neotree.el")
 (load "shell-integration.el")
 (load "navigation.el")
 (load "ui.el")
 (load "editing.el")
 (load "other.el")
 (load "elisp-editing.el")
-(load "setup-rust.el")
+(load "setup-elm.el")
 (load "setup-clojure.el")
 (load "setup-haskell.el")
-(load "setup-elm.el")
+(load "setup-js.el")
+(load "setup-rust.el")
 
 (evil-mode 1)
 (custom-set-variables
