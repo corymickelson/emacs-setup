@@ -29,7 +29,7 @@
   '(ag
     ample-regexps
     async
-    ;; auto-complete
+    auto-complete
     cider
     clojure-mode
     clj-refactor
