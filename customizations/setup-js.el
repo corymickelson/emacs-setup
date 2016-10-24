@@ -4,7 +4,7 @@
 (require 'js2-refactor)
 (require 'js-doc)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-(add-to-list 'load-path "~/.nvm/versions/node/v6.5.0/lib/node_modules/tern/emacs/")
+(add-to-list 'load-path "~/.nvm/versions/node/v6.8.0/lib/node_modules/tern/emacs/")
 (autoload 'tern-mode "tern.el" nil t)
 
 (add-hook 'js2-mode-hook 'subword-mode)
