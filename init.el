@@ -64,6 +64,7 @@
     magit
     magit-popup
     multiple-cursors
+    nodejs-repl
     paredit
     peg
     pkg-info
