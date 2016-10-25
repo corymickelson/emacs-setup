@@ -12,12 +12,10 @@
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (add-to-list 'package-archives
              '("tromey" . "http://tromey.com/elpa/") t)
-;; (add-to-list 'package-archives
-;;              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives
               '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
-;; (add-to-list 'package-pinned-packages '(clj-refactor . "melpa-stable") t)
+(add-to-list 'package-pinned-packages '(clj-refactor . "melpa-stable") t)
 (add-to-list 'package-pinned-packages '(intero . "melpa-default") t)
 
 (package-initialize)
