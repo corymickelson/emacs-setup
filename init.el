@@ -76,6 +76,7 @@
     typed-clojure-mode
     ujelly-theme
     undo-tree
+    web-beautify
     wgrep-ag
     with-editor
     yasnippet))
@@ -103,7 +104,7 @@
 (add-to-list 'load-path "~/.emacs.d/customizations")
 (add-to-list 'load-path "~/.emacs.d/neotree")
 ;;(add-to-list 'load-path "~/.emacs.d/web-beautify")
-;;(load "web-formatter.el")
+(load "web-formatter.el")
 (load "neotree.el")
 (load "shell-integration.el")
 (load "navigation.el")
