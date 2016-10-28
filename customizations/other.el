@@ -24,7 +24,7 @@
 ;; flycheck
 (require 'flycheck)
 (add-hook 'after-init-hook #'global-flycheck-mode)
-(add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
+;;(add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
 (with-eval-after-load 'flycheck
   (flycheck-pos-tip-mode))
 (provide 'other)

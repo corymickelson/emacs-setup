@@ -13,8 +13,6 @@
 (add-to-list 'package-archives
              '("tromey" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives
               '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
 (add-to-list 'package-pinned-packages '(clj-refactor . "melpa-stable") t)
@@ -36,7 +34,7 @@
     clojure-mode-extra-font-locking
     cm-mode
     company
-    ;; company-ghc
+    ;;company-ghc
     company-racer
     epl
     elm-mode
@@ -46,7 +44,8 @@
     f
     flycheck
     flycheck-clojure
-    ;; flycheck-haskell
+    flycheck-elm
+    ;;flycheck-haskell
     flycheck-pos-tip
     flycheck-rust
     git-commit
