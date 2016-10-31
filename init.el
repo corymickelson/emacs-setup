@@ -63,6 +63,7 @@
     magit
     magit-popup
     multiple-cursors
+    neotree
     nodejs-repl
     paredit
     peg

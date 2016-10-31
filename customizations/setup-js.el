@@ -4,21 +4,22 @@
 
 ;;; Code:
 (require 'js2-refactor)
-(require 'js-doc)
 (require 'nodejs-repl)
+(require 'js-doc)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'load-path "~/.nvm/versions/node/v6.9.1/lib/node_modules/tern/emacs/")
+(add-to-list 'interpreter-mode-alist '("node" . js2-mode))
+
 (autoload 'tern-mode "tern.el" nil t)
 
+(add-hook 'js-mode-hook 'my-paredit-nonlisp)
 (add-hook 'js2-mode-hook 'subword-mode)
 (add-hook 'html-mode-hook 'subword-mode)
 (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
-(add-hook 'js2-mode 'auto-complete-mode)
-(add-hook 'js2-mode-hook 'ac-js2-mode)
-(add-to-list 'interpreter-mode-alist '("node" . js2-mode))
 
 (js2r-add-keybindings-with-prefix "C-c C-m")
+(setq js2-strict-missing-semi-warning nil)
 (setq js2-highlight-level 3)
 
 (defun delete-tern-process ()
@@ -49,6 +50,7 @@
 (eval-after-load 'tern
                  '(progn
                     (require 'tern-auto-complete)
+                    (auto-complete-mode 1)
                     (tern-ac-setup)))
 
 (defun my-paredit-nonlisp ()
@@ -58,7 +60,6 @@
                     '((lambda (endp delimiter) nil)))
           (paredit-mode 1))
 
-(add-hook 'js-mode-hook 'my-paredit-nonlisp)
 (define-key js-mode-map "{" 'paredit-open-curly)
 (define-key js-mode-map "}" 'paredit-close-curly-and-newline)
 (provide 'setup-js)

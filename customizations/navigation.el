@@ -18,7 +18,7 @@
 
 (require 'recentf)
 
-(require 'neotree)
+;; (require 'neotree)
 
 (require 'smex)
 

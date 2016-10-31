@@ -7,13 +7,28 @@
 
 (require 'company)
 
+(require 'auto-complete)
+
 (require 'iedit)
 
 (require 'evil-iedit-state)
 
 (require 'saveplace)
 
-(global-company-mode 1)
+(require 'flycheck)
+
+;; (add-hook 'after-init-hook #'global-flycheck-mode)
+;; (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
+
+(with-eval-after-load 'flycheck
+  (flycheck-pos-tip-mode))
+
+(add-to-list 'company-backends 'company-elm)
+
+(add-to-list 'company-backends 'company-racer)
+
+(add-to-list 'ac-modes 'js-mode)
+(ac-config-default)
 
 (global-set-key (kbd "TAB") #'company-indent-or-complete-common)
 
