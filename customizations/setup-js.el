@@ -17,6 +17,7 @@
 (add-hook 'html-mode-hook 'subword-mode)
 (add-hook 'js2-mode-hook (lambda () (tern-mode t)))
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
+(add-hook 'js2-mode 'auto-complete-mode)
 
 (js2r-add-keybindings-with-prefix "C-c C-m")
 (setq js2-strict-missing-semi-warning nil)

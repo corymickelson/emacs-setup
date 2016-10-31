@@ -1,5 +1,6 @@
 ;;; Package --- Summary
 ;;; Commentary:
+;;; This setup is for haskell, elm, clojure and javascript
 ;;; Haskell is setup with intero to use ghc-mod uncomment uncommented out packages
 ;;; Code:
 
@@ -34,8 +35,6 @@
     clojure-mode-extra-font-locking
     cm-mode
     company
-    ;;company-ghc
-    company-racer
     epl
     elm-mode
     evil
@@ -45,11 +44,8 @@
     flycheck
     flycheck-clojure
     flycheck-elm
-    ;;flycheck-haskell
     flycheck-pos-tip
-    flycheck-rust
     git-commit
-    ;; ghc
     goto-chg
     haskell-mode
     ido-ubiquitous
@@ -71,9 +67,7 @@
     popup
     projectile
     queue
-    racer
     rainbow-delimiters
-    rust-mode
     s
     simple-httpd
     smex
@@ -123,7 +117,6 @@
 (load "setup-clojure.el")
 (load "setup-haskell.el")
 (load "setup-js.el")
-(load "setup-rust.el")
 
 (evil-mode 1)
 (custom-set-variables
