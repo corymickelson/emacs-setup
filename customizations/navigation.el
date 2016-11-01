@@ -37,25 +37,50 @@
 ;; name, ido will narrow down the list of buffers to match the text
 ;; you've typed in
 ;; http://www.emacswiki.org/emacs/InteractivelyDoThings
-(ido-mode t)
+;; (ido-mode t)
+;; (ido-everywhere t)
+;; (setq ido-enable-flex-matching t)
+;; (setq ido-use-filename-at-point nil)
+;; (setq ido-auto-merge-work-directories-length -1)
+;; (setq ido-use-virtual-buffers t)
+;; (setq-default org-completion-use-ido t)
+;; (setq-default magit-completing-read-function 'magit-ido-completing-read)
 
-;; This allows partial matches, e.g. "tl" will match "Tyrion Lannister"
-(setq ido-enable-flex-matching t)
+;; (ido-ubiquitous-mode t)
 
-;; Turn this behavior off because it's annoying
-(setq ido-use-filename-at-point nil)
+;; (setq ido-default-buffer-method 'selected-window)
 
-;; Don't try to match file across all "work" directories; only match files
-;; in the current directory displayed in the minibuffer
-(setq ido-auto-merge-work-directories-length -1)
+;; (add-hook 'ido-setup-hook (lambda () (define-key ido-completion-map [up] 'previous-history-element)))
+(setq-default ivy-use-virtual-buffers t
+              ivy-count-format ""
+              projectile-completion-system 'ivy
+              ivy-initial-inputs-alist
+              '((counsel-M-x . "^")
+                (man . "^")
+                (woman . "^")))
+;;(define-key ivy-minibuffer-map (kbd "C-j") #'ivy-immediate-done)
+;;(define-key ivy-minibuffer-map (kbd "RET") #'ivy-alt-done)
+(ivy-mode 1)
+(diminish 'ivy-mode)
+(defun sanityinc/enable-ivy-flx-matching ()
+  "Make `ivy' matching work more like IDO."
+  (interactive)
+  (require-package 'flx)
+  (setq-default ivy-re-builders-alist
+                '((t . ivy--regex-fuzzy))))
 
-;; Includes buffer names of recently open files, even if they're not
-;; open now
-(setq ido-use-virtual-buffers t)
+(add-hook 'after-init-hook
+          (lambda ()
+            (when (bound-and-true-p ido-ubiquitous-mode)
+              (ido-ubiquitous-mode -1)
+              (ido-mode -1))
+            (ivy-mode 1)))
 
-;; This enables ido in all contexts where it could be useful, not just
-;; for selecting buffer and file names
-(ido-ubiquitous-mode 1)
+
+(setq-default counsel-mode-override-describe-bindings t)
+(diminish 'counsel-mode)
+(add-hook 'after-init-hook 'counsel-mode)
+
 
 ;; Shows a list of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)

@@ -35,12 +35,12 @@
       js-doc-author "Cory Mickelson"
       js-doc-url "https://github.com/corymickelson"
       js-doc-license "MIT")
+(js2-imenu-extras-setup)
 (add-hook 'js2-mode-hook #'(lambda ()
                              (define-key js2-mode-map "C-c i" 'js-doc-insert-function-doc)
                              (define-key js2-mode-map "@" 'js-doc-insert-tag)))
 (add-hook 'js2-mode-hook '(lambda ()
                             (local-set-key (kbd "RET") 'newline-and-indent)))
-
 (eval-after-load "sgml-mode"
   '(progn
      (require 'tagedit)

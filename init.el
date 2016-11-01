@@ -29,54 +29,75 @@
     ample-regexps
     async
     auto-complete
+    browse-kill-ring
     cider
     clojure-mode
     clj-refactor
     clojure-mode-extra-font-locking
     cm-mode
     company
+    counsel
+    darcsum
+    diminish
     epl
     elm-mode
     evil
     evil-iedit-state
     exec-path-from-shell
+    expand-region
     f
     flycheck
     flycheck-clojure
     flycheck-elm
     flycheck-pos-tip
+    flx
+    fullframe
+    git-messenger
+    gitignore-mode
+    gitconfig-mode
+    git-timemachine
     git-commit
     goto-chg
     haskell-mode
+    highlight-symbol
+    highlight-escape-sequences
     ido-ubiquitous
     iedit
+    indent-guide
     inflections
     intero
+    ivy
     js2-mode
     js2-refactor
     js-doc
+    json-mode
     let-alist
     magit
     magit-popup
     multiple-cursors
     neotree
+    nlinum
     nodejs-repl
     paredit
     peg
     pkg-info
     popup
     projectile
+    origami
     queue
     rainbow-delimiters
     s
     simple-httpd
     smex
     spinner
+    swiper
     tagedit
     tern-auto-complete
     typed-clojure-mode
     ujelly-theme
+    unfill
     undo-tree
+    vc-darcs
     web-beautify
     wgrep-ag
     with-editor
@@ -105,18 +126,19 @@
 (add-to-list 'load-path "~/.emacs.d/customizations")
 (add-to-list 'load-path "~/.emacs.d/neotree")
 ;;(add-to-list 'load-path "~/.emacs.d/web-beautify")
-(load "web-formatter.el")
 (load "neotree.el")
-(load "shell-integration.el")
-(load "navigation.el")
-(load "ui.el")
+(load "web-formatter.el")
 (load "editing.el")
-(load "other.el")
+;;(load "setup-ibuffer.el")
+(load "setup-versioning.el")
+(load "setup-autocompletions.el")
+(load "navigation.el")
 (load "elisp-editing.el")
 (load "setup-elm.el")
 (load "setup-clojure.el")
 (load "setup-haskell.el")
 (load "setup-js.el")
+(load "ui.el")
 
 (evil-mode 1)
 (custom-set-variables
