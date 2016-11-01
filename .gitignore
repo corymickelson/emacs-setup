@@ -15,4 +15,6 @@ auto-save-list
 backups
 elpa/
 .emacs.desktop
+.session
+recentf
 network-security.data

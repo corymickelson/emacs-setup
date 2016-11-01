@@ -38,6 +38,7 @@
     company
     counsel
     darcsum
+    dash-at-point
     diminish
     epl
     elm-mode
@@ -57,6 +58,7 @@
     gitconfig-mode
     git-timemachine
     git-commit
+    git-gutter
     goto-chg
     haskell-mode
     highlight-symbol
@@ -130,8 +132,9 @@
 (load "web-formatter.el")
 (load "editing.el")
 ;;(load "setup-ibuffer.el")
+(load "setup-dash.el")
 (load "setup-versioning.el")
-(load "setup-autocompletions.el")
+(load "setup-intellisense.el")
 (load "navigation.el")
 (load "elisp-editing.el")
 (load "setup-elm.el")

@@ -19,6 +19,8 @@
     (setq vc-disable-async-diff nil))
 (setq darcsum-whatsnew-switches "-l")
 
+(global-git-gutter-mode +1)
+(git-gutter:linum-setup)
 
 (provide 'setup-versioning)
 ;;; setup-versioning.el ends here
