@@ -1,7 +1,6 @@
 ;;; Package --- Summary
 
 ;;; Commentary:
-;;; This file sets up evil, some company setting, ag searching
 
 ;;; Code:
 
@@ -22,8 +21,6 @@
 (require 'auto-complete)
 
 (require 'iedit)
-
-(require 'evil-iedit-state)
 
 (require 'saveplace)
 

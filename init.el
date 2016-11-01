@@ -43,6 +43,7 @@
     epl
     elm-mode
     evil
+    evil-escape
     evil-iedit-state
     exec-path-from-shell
     expand-region
@@ -142,6 +143,7 @@
 (load "setup-haskell.el")
 (load "setup-js.el")
 (load "ui.el")
+(load "setup-evil.el")
 
 (evil-mode 1)
 (custom-set-variables

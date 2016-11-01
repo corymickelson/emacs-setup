@@ -4,6 +4,7 @@
 
 ;; These customizations make it easier for you to navigate files,
 ;; switch buffers, and choose options from the minibuffer.
+;; Directory navigation using ivy
 
 ;;; Code:
 
@@ -29,7 +30,6 @@
 (setq recentf-save-file (concat user-emacs-directory ".recentf"))
 (recentf-mode 1)
 (setq recentf-max-menu-items 40)
-
 
 ;; ido-mode allows you to more easily navigate choices. For example,
 ;; when you want to switch buffers, ido presents you with a list
@@ -85,7 +85,6 @@
 ;; Shows a list of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-
 ;; Enhances M-x to allow easier execution of commands. Provides
 ;; a filterable list of possible commands in the minibuffer
 ;; http://www.emacswiki.org/emacs/Smex
@@ -108,7 +107,7 @@
             (define-key evil-normal-state-local-map (kbd "C-+") 'neotree-create-node)))
 
 ;; Save buffers, on next start up open previous buffers
-(desktop-save-mode 1)
+;; (desktop-save-mode 1)
 
 (provide 'navigation)
 
