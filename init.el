@@ -4,6 +4,14 @@
 ;;; Haskell is setup with intero to use ghc-mod uncomment uncommented out packages
 ;;; Code:
 
+
+(defconst sanityinc/initial-gc-cons-threshold gc-cons-threshold
+  "Initial value of `gc-cons-threshold' at start-up time.")
+(setq gc-cons-threshold (* 128 1024 1024))
+(add-hook 'after-init-hook
+          (lambda () (setq gc-cons-threshold sanityinc/initial-gc-cons-threshold)))
+
+
 ;; Define package repositories
 (require 'package)
 (add-to-list
@@ -25,86 +33,96 @@
   (package-refresh-contents))
 
 (defvar my-packages
-  '(ag
-    ample-regexps
-    async
+  '(
+    ;; Intellisense Libraries
     auto-complete
+    company
+    flycheck
+    flycheck-pos-tip
+    ;; Navigation Libraries
+    smex
+    undo-tree
+    flx
+    neotree
+    projectile
+    ido-ubiquitous
+    swiper
+    ;;ivy
+    ;; Editing Libraries
     browse-kill-ring
+    rainbow-delimiters
+    yasnippet
+    evil
+    evil-escape
+    evil-iedit-state
+    iedit
+    indent-guide
+    highlight-symbol
+    highlight-escape-sequences
+    paredit
+    expand-region
+    multiple-cursors
+    origami
+    ;; Language Javascript
+    js2-mode
+    tagedit
+    js2-refactor
+    js-doc
+    json-mode
+    tern-auto-complete
+    web-beautify
+    nodejs-repl
+    ;; Language Clojure
+    epl
+    typed-clojure-mode
     cider
     clojure-mode
     clj-refactor
     clojure-mode-extra-font-locking
-    cm-mode
-    company
+    flycheck-clojure
+    ;; Utility Libraries
+    powerline
     counsel
-    darcsum
+    exec-path-from-shell
+    ag
+    wgrep-ag
+    fullframe
     dash-at-point
     diminish
-    epl
-    elm-mode
-    evil
-    evil-escape
-    evil-iedit-state
-    exec-path-from-shell
-    expand-region
-    f
-    flycheck
-    flycheck-clojure
-    flycheck-elm
-    flycheck-pos-tip
-    flx
-    fullframe
+    ;; Version Control
     git-messenger
     gitignore-mode
     gitconfig-mode
     git-timemachine
     git-commit
-    git-gutter
-    goto-chg
-    haskell-mode
-    highlight-symbol
-    highlight-escape-sequences
-    ido-ubiquitous
-    ;;iedit
-    indent-guide
-    inflections
-    intero
-    ivy
-    js2-mode
-    js2-refactor
-    js-doc
-    json-mode
-    let-alist
+    diff-hl
     magit
     magit-popup
-    multiple-cursors
-    neotree
-    nlinum
-    nodejs-repl
-    paredit
-    peg
-    pkg-info
-    popup
-    powerline
-    projectile
-    origami
-    queue
-    rainbow-delimiters
-    s
-    simple-httpd
-    smex
-    spinner
-    swiper
-    tagedit
-    tern-auto-complete
-    typed-clojure-mode
-    unfill
-    undo-tree
-    vc-darcs
-    web-beautify
-    wgrep-ag
-    with-editor
-    yasnippet))
+    ;; Language Lisp
+    ;; Language Haskell
+    elm-mode
+    flycheck-elm
+    haskell-mode
+    intero
+
+    ;; Unknowns are commented out until it's clear where they are supposed to be located
+    ;;ample-regexps
+    ;;async
+    ;;cm-mode
+    ;; f
+    ;; goto-chg
+    ;; inflections
+    ;; let-alist
+    ;; nlinum
+    ;; peg
+    ;; pkg-info
+    ;; popup
+    ;; queue
+    ;; s
+    ;; simple-httpd
+    ;; spinner
+    ;; with-editor
+    ))
 
 (if (eq system-type 'darwin)
     (add-to-list 'my-packages 'exec-path-from-shell))
@@ -128,9 +146,10 @@
 (add-to-list 'load-path "~/.emacs.d/vendor")
 (add-to-list 'load-path "~/.emacs.d/customizations")
 (add-to-list 'load-path "~/.emacs.d/neotree")
-;;(add-to-list 'load-path "~/.emacs.d/web-beautify")
+;; Load sequence matters!!!
 (load "neotree.el")
 (load "web-formatter.el")
+(load "setup-utilities.el")
 (load "editing.el")
 ;;(load "setup-ibuffer.el")
 (load "setup-dash.el")
@@ -169,7 +188,8 @@
     (flycheck-haskell wgrep-ag ujelly-theme tagedit smex simple-httpd rainbow-delimiters racer projectile magit ido-ubiquitous flycheck-rust flycheck-pos-tip flycheck-clojure exec-path-from-shell evil-iedit-state company-racer company-ghc cm-mode clojure-mode-extra-font-locking clj-refactor auto-complete ample-regexps ag)))
  '(safe-local-variable-values
    (quote
-    ((haskell-process-use-ghci . t)
+    ((no-byte-compile t)
+     (haskell-process-use-ghci . t)
      (haskell-indent-spaces . 4)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

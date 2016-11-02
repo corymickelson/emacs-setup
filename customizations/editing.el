@@ -4,27 +4,14 @@
 
 ;;; Code:
 
-(require 'unfill)
-
 (require 'browse-kill-ring)
-
 (require 'indent-guide)
-
-(require 'nlinum)
-
 (require 'undo-tree)
-
 (require 'origami)
-
 (require 'highlight-escape-sequences)
-
 (require 'auto-complete)
-
 (require 'iedit)
-
 (require 'saveplace)
-
-(require 'flycheck)
 
 (setq-default
  blink-cursor-interval 0.4
@@ -47,11 +34,13 @@
 (global-auto-revert-mode)
 (setq global-auto-revert-non-file-buffers t
       auto-revert-verbose nil)
-
+(transient-mark-mode)
 (add-hook 'prog-mode-hook 'indent-guide-mode)
+(diminish 'indent-guide-mode)
 
 (global-prettify-symbols-mode)
 (global-undo-tree-mode)
+(diminish 'undo-tree-mode)
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -94,13 +83,9 @@
 (hes-mode)
 
 (add-hook 'prog-mode-hook 'origami-mode)
+(diminish 'origami-mode)
 (define-key origami-mode-map (kbd "C-c f") 'origami-recursively-toggle-node)
     (define-key origami-mode-map (kbd "C-c F") 'origami-toggle-all-nodes)
-;; (add-hook 'after-init-hook #'global-flycheck-mode)
-;; (add-hook 'flycheck-mode-hook #'flycheck-rust-setup)
-
-(with-eval-after-load 'flycheck
-  (flycheck-pos-tip-mode))
 
 (global-hl-line-mode 1)
 

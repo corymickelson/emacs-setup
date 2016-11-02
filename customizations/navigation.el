@@ -58,14 +58,13 @@
               '((counsel-M-x . "^")
                 (man . "^")
                 (woman . "^")))
-;;(define-key ivy-minibuffer-map (kbd "C-j") #'ivy-immediate-done)
-;;(define-key ivy-minibuffer-map (kbd "RET") #'ivy-alt-done)
 (ivy-mode 1)
+(define-key ivy-minibuffer-map (kbd "C-j") #'ivy-immediate-done)
+(define-key ivy-minibuffer-map (kbd "RET") #'ivy-alt-done)
 (diminish 'ivy-mode)
 (defun sanityinc/enable-ivy-flx-matching ()
   "Make `ivy' matching work more like IDO."
   (interactive)
-  (require-package 'flx)
   (setq-default ivy-re-builders-alist
                 '((t . ivy--regex-fuzzy))))
 

@@ -10,6 +10,22 @@
 
 ;;; Code:
 
+(defconst *is-a-mac* (eq system-type 'darwin))
+
+(defun maybe-suspend-frame ()
+  (interactive)
+  (unless (and *is-a-mac* window-system)
+    (suspend-frame)))
+
+(global-set-key (kbd "C-z") 'maybe-suspend-frame)
+
+(setq use-file-dialog nil)
+(setq use-dialog-box nil)
+(setq inhibit-startup-screen t)
+(setq inhibit-startup-echo-area-message t)
+
+(setq indicate-empty-lines t)
+
 ;; Turn off the menu bar at the top of each frame because it's distracting
 (menu-bar-mode -1)
 
@@ -73,6 +89,44 @@
 
 ;; no bell
 (setq ring-bell-function 'ignore)
+(defun sanityinc/adjust-opacity (frame incr)
+  "Adjust the background opacity of FRAME by increment INCR."
+  (unless (display-graphic-p frame)
+    (error "Cannot adjust opacity of this frame"))
+  (let* ((oldalpha (or (frame-parameter frame 'alpha) 100))
+         ;; The 'alpha frame param became a pair at some point in
+         ;; emacs 24.x, e.g. (100 100)
+         (oldalpha (if (listp oldalpha) (car oldalpha) oldalpha))
+         (newalpha (+ incr oldalpha)))
+    (when (and (<= frame-alpha-lower-limit newalpha) (>= 100 newalpha))
+      (modify-frame-parameters frame (list (cons 'alpha newalpha))))))
+
+(when (and *is-a-mac* (fboundp 'toggle-frame-fullscreen))
+  ;; Command-Option-f to toggle fullscreen mode
+  ;; Hint: Customize `ns-use-native-fullscreen'
+  (global-set-key (kbd "M-ƒ") 'toggle-frame-fullscreen))
+
+;; TODO: use seethru package instead?
+(global-set-key (kbd "M-C-8") (lambda () (interactive) (sanityinc/adjust-opacity nil -2)))
+(global-set-key (kbd "M-C-9") (lambda () (interactive) (sanityinc/adjust-opacity nil 2)))
+(global-set-key (kbd "M-C-0") (lambda () (interactive) (modify-frame-parameters nil `((alpha . 100)))))
+
+(add-hook 'after-make-frame-functions
+          (lambda (frame)
+            (with-selected-frame frame
+              (unless window-system
+                (set-frame-parameter nil 'menu-bar-lines 0)))))
+
+(setq frame-title-format
+      '((:eval (if (buffer-file-name)
+                   (abbreviate-file-name (buffer-file-name))
+                 "%b"))))
+
+;; Non-zero values for `line-spacing' can mess up ansi-term and co,
+;; so we zero it explicitly in those cases.
+(add-hook 'term-mode-hook
+          (lambda ()
+            (setq line-spacing 0)))
 
 (provide 'ui)
 ;;; ui.el ends here
