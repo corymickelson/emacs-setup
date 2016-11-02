@@ -77,8 +77,8 @@
 
 
 (setq-default counsel-mode-override-describe-bindings t)
-(diminish 'counsel-mode)
 (add-hook 'after-init-hook 'counsel-mode)
+(diminish 'counsel-mode)
 
 
 ;; Shows a list of buffers

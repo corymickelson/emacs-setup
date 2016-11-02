@@ -34,12 +34,11 @@
 
 (defvar my-packages
   '(
-    ;; Intellisense Libraries
+    ;; Intellisense
     auto-complete
     company
     flycheck
-    flycheck-pos-tip
-    ;; Navigation Libraries
+    ;; Navigation
     smex
     undo-tree
     flx
@@ -47,8 +46,7 @@
     projectile
     ido-ubiquitous
     swiper
-    ;;ivy
-    ;; Editing Libraries
+    ;; Editing
     browse-kill-ring
     rainbow-delimiters
     yasnippet
@@ -63,7 +61,7 @@
     expand-region
     multiple-cursors
     origami
-    ;; Language Javascript
+    ;; Javascript
     js2-mode
     tagedit
     js2-refactor
@@ -72,7 +70,7 @@
     tern-auto-complete
     web-beautify
     nodejs-repl
-    ;; Language Clojure
+    ;; Clojure
     epl
     typed-clojure-mode
     cider
@@ -80,7 +78,7 @@
     clj-refactor
     clojure-mode-extra-font-locking
     flycheck-clojure
-    ;; Utility Libraries
+    ;; Utility
     powerline
     counsel
     exec-path-from-shell
@@ -98,31 +96,27 @@
     diff-hl
     magit
     magit-popup
-    ;; Language Lisp
-    ;; Language Haskell
+    ;; Lisp
+    slime
+    ielm
+    elisp-slime-nav
+    lively
+    ipretty
+    hl-sexp
+    immortal-scratch
+    redshank
+    aggressive-indent
+    cl-lib-highlight
+    macrostep
+    highlight-quoted
+    eldoc-eval
+    ert
+    auto-compile
+    ;; Haskell
     elm-mode
     flycheck-elm
     haskell-mode
-    intero
-
-    ;; Unknowns are commented out until it's clear where they are supposed to be located
-    ;;ample-regexps
-    ;;async
-    ;;cm-mode
-    ;; f
-    ;; goto-chg
-    ;; inflections
-    ;; let-alist
-    ;; nlinum
-    ;; peg
-    ;; pkg-info
-    ;; popup
-    ;; queue
-    ;; s
-    ;; simple-httpd
-    ;; spinner
-    ;; with-editor
-    ))
+    intero))
 
 (if (eq system-type 'darwin)
     (add-to-list 'my-packages 'exec-path-from-shell))
@@ -151,7 +145,6 @@
 (load "web-formatter.el")
 (load "setup-utilities.el")
 (load "editing.el")
-;;(load "setup-ibuffer.el")
 (load "setup-dash.el")
 (load "setup-versioning.el")
 (load "setup-intellisense.el")
