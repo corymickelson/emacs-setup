@@ -65,7 +65,7 @@
     highlight-symbol
     highlight-escape-sequences
     ido-ubiquitous
-    iedit
+    ;;iedit
     indent-guide
     inflections
     intero
@@ -85,6 +85,7 @@
     peg
     pkg-info
     popup
+    powerline
     projectile
     origami
     queue
@@ -97,7 +98,6 @@
     tagedit
     tern-auto-complete
     typed-clojure-mode
-    ujelly-theme
     unfill
     undo-tree
     vc-darcs

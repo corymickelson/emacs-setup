@@ -89,7 +89,6 @@
 (put 'narrow-to-region 'disabled nil)
 (put 'narrow-to-page 'disabled nil)
 (put 'narrow-to-defun 'disabled nil)
-
 (show-paren-mode 1)
 
 (hes-mode)
@@ -142,7 +141,7 @@
   "Toggle line comment."
   (interactive)
   (comment-or-uncomment-region (line-beginning-position) (line-end-position)))
-(global-set-key (kbd "C-;") 'toggle-comment-on-line)
+(global-set-key (kbd "M-;") 'toggle-comment-on-line)
 
 (defun die-tabs ()
   "Use 2 spaces for tabs."
