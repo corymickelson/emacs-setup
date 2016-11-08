@@ -8,9 +8,12 @@
 
 (require 'company)
 (require 'evil)
+(require 'tagedit)
+
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-;;(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 (add-hook 'haskell-mode-hook 'intero-mode)
+(setq haskell-font-lock-symbols t)
 ;;(add-hook 'haskell-mode-hook 'structured-haskell-mode)
 
 ;; (add-to-list 'load-path "/Users/corymickelson/.local/bin/ghc-mod")

@@ -6,8 +6,8 @@
 (require 'flycheck)
 
 ;; Autocomplete Mode
-(add-to-list 'ac-modes 'js-mode)
-(ac-config-default)
+;;(add-to-list 'ac-modes 'js-mode)
+;;(ac-config-default)
 
 ;; Flycheck Mode
 (add-hook 'after-init-hook 'global-flycheck-mode)
@@ -20,6 +20,7 @@
 (setq company-tooltip-align-annotations t)
 (setq company-idle-delay 0.2)
 (setq company-minimum-prefix-length 1)
+(global-company-mode 1)
 (diminish 'company-mode "CMP")
 
 (add-hook 'cider-repl-mode-hook #'company-mode)
