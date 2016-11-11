@@ -1,13 +1,14 @@
 ;;; Package --- Summary
 ;;; Commentary:
+;; Autocomplete-mode is only used for javascript, uncomment as company and auto complete conflict
 ;;; Code:
 (require 'company)
 (require 'auto-complete)
 (require 'flycheck)
 
 ;; Autocomplete Mode
-(add-to-list 'ac-modes 'js-mode)
-(ac-config-default)
+;;(add-to-list 'ac-modes 'js-mode)
+;;(ac-config-default)
 
 ;; Flycheck Mode
 (add-hook 'after-init-hook 'global-flycheck-mode)

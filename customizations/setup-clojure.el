@@ -5,6 +5,9 @@
 ;;; Code:
 (add-hook 'clojure-mode-hook #'enable-paredit-mode)
 (add-hook 'clojure-mode-hook 'subword-mode)
+(add-hook 'clojurescript-mode-hook #'enable-paredit-mode)
+(add-hook 'clojurescript-mode-hook 'subword-mode)
+
 (require 'clojure-mode-extra-font-locking)
 (require 'clj-refactor)
 (add-hook 'clojure-mode-hook (lambda ()
@@ -35,7 +38,7 @@
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
 (add-to-list 'auto-mode-alist '("\\.edn$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("\\.boot$" . clojure-mode))
-(add-to-list 'auto-mode-alist '("\\.cljs.*$" . clojure-mode))
+(add-to-list 'auto-mode-alist '("\\.cljs.*$" . clojurescript-mode))
 (add-to-list 'auto-mode-alist '("lein-env" . enh-ruby-mode))
 
 (defun cider-start-http-server ()
