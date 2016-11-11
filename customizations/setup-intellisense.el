@@ -21,6 +21,7 @@
 (setq company-tooltip-align-annotations t)
 (setq company-idle-delay 0.2)
 (setq company-minimum-prefix-length 1)
+(global-company-mode 1)
 (diminish 'company-mode "CMP")
 
 (add-hook 'cider-repl-mode-hook #'company-mode)

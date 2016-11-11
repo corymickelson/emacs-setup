@@ -66,5 +66,8 @@
      (define-key clojure-mode-map (kbd "C-c u") 'cider-user-ns)
      (define-key cider-mode-map (kbd "C-c u") 'cider-user-ns)))
 
+(diminish 'typed-clojure-mode)
+(diminish 'clj-refactor-mode)
+
 (provide 'setup-clojure)
 ;;; setup-clojure.el ends here
