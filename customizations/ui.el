@@ -54,7 +54,7 @@
 (load-theme 'sanityinc-tomorrow-bright t)
 
 ;; increase font size for better readability
-(set-face-attribute 'default nil :font "Monaco-11")
+(set-face-attribute 'default nil :font "monaco-11")
 
 ;; Uncomment the lines below by removing semicolons and play with the
 ;; values in order to set the width (in characters wide) and height

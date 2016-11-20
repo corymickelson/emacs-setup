@@ -35,7 +35,7 @@
 (defvar my-packages
   '(
     ;; Intellisense
-    auto-complete
+    ;; auto-complete
     company
     flycheck
     ;; Navigation
@@ -113,6 +113,9 @@
     ert
     auto-compile
     ;; Haskell
+    ghc
+    hindent
+    company-ghc
     elm-mode
     flycheck-elm
     haskell-mode
@@ -171,7 +174,7 @@
    "(cemerick.piggieback/cljs-repl (cljs.repl.rhino/repl-env))")
  '(clojure-align-forms-automatically t)
  '(company-ghc-show-info t)
- '(custom-enabled-themes (quote (sanityinc-tomorrow-night)))
+ '(custom-enabled-themes (quote (sanityinc-tomorrow-bright)))
  '(custom-safe-themes
    (quote
     ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "9e54a6ac0051987b4296e9276eecc5dfb67fdcd620191ee553f40a9b6d943e78" default)))

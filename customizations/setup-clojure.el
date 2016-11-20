@@ -8,6 +8,9 @@
 (add-hook 'clojurescript-mode-hook #'enable-paredit-mode)
 (add-hook 'clojurescript-mode-hook 'subword-mode)
 
+(setenv "PATH" (concat (getenv "PATH") "/home/harmony/.resources"))
+(setq exec-path (append exec-path '("/home/harmony/.resources")))
+
 (require 'clojure-mode-extra-font-locking)
 (require 'clj-refactor)
 (add-hook 'clojure-mode-hook (lambda ()
