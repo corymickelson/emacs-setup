@@ -114,12 +114,12 @@
     auto-compile
     ;; Haskell
     ghc
+    intero
     hindent
     company-ghc
     elm-mode
     flycheck-elm
-    haskell-mode
-    intero))
+    haskell-mode))
 
 (if (eq system-type 'darwin)
     (add-to-list 'my-packages 'exec-path-from-shell))
@@ -156,7 +156,7 @@
 (load "setup-elm.el")
 (load "setup-clojure.el")
 (load "setup-haskell.el")
-(load "setup-js.el")
+;;(load "setup-js.el")
 (load "ui.el")
 (load "setup-evil.el")
 
@@ -174,11 +174,14 @@
    "(cemerick.piggieback/cljs-repl (cljs.repl.rhino/repl-env))")
  '(clojure-align-forms-automatically t)
  '(company-ghc-show-info t)
- '(custom-enabled-themes (quote (sanityinc-tomorrow-bright)))
+ '(custom-enabled-themes (quote (sanityinc-tomorrow-day)))
  '(custom-safe-themes
    (quote
-    ("06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "9e54a6ac0051987b4296e9276eecc5dfb67fdcd620191ee553f40a9b6d943e78" default)))
+    ("1b8d67b43ff1723960eb5e0cba512a2c7a2ad544ddb2533a90101fd1852b426e" "06f0b439b62164c6f8f84fdda32b62fb50b6d00e8b01c2208e55543a6337433a" "9e54a6ac0051987b4296e9276eecc5dfb67fdcd620191ee553f40a9b6d943e78" default)))
  '(fci-rule-color "#282a2e")
+ '(haskell-process-auto-import-loaded-modules t)
+ '(haskell-process-log t)
+ '(haskell-process-suggest-remove-import t)
  '(haskell-process-type (quote stack-ghci))
  '(haskell-tags-on-save t)
  '(package-selected-packages

@@ -51,7 +51,7 @@
 ;; for a more technical explanation.
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (add-to-list 'load-path "~/.emacs.d/themes")
-(load-theme 'sanityinc-tomorrow-bright t)
+(load-theme 'sanityinc-tomorrow-day t)
 
 ;; increase font size for better readability
 (set-face-attribute 'default nil :font "monaco-11")

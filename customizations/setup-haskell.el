@@ -10,8 +10,11 @@
 (require 'haskell-mode)
 (require 'evil)
 (require 'tagedit)
+(require 'intero)
+
+(add-hook 'haskell-mode-hook 'intero-mode)
 (add-to-list 'load-path "~/.local/bin/ghc-mod")
-(add-to-list 'load-path "~/.stack/programs/x86_64-osx/ghc-8.0.1")
+(add-to-list 'load-path "~/.stack/programs/x86_64-linux/ghc-8.0.1")
 
 (let ((hasktags-path (expand-file-name "~/.local/bin")))
   (setenv "PATH" (concat hasktags-path path-separator (getenv "PATH")))
@@ -25,11 +28,11 @@
 
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
-;; (add-hook 'haskell-mode-hook 'intero-mode)
 (setq haskell-font-lock-symbols t)
-;;(add-hook 'haskell-mode-hook 'structured-haskell-mode)
 
 (custom-set-variables '(haskell-process-type 'stack-ghci))
+(add-to-list 'company-backends 'company-ghc)
+(custom-set-variables '(company-ghc-show-info t))
 
 (autoload 'ghc-init "ghc" nil t)
 (autoload 'ghc-debug "ghc" nil t)
@@ -43,7 +46,7 @@
  '(haskell-process-suggest-remove-import t)
  '(haskell-process-auto-import-loaded-modules t)
  '(haskell-process-log t))
-(eval-after-load 'haskell-mode
+(with-eval-after-load 'haskell-mode
  '(progn
     (define-key evil-normal-state-local-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
     (define-key evil-normal-state-local-map (kbd "C-c C-z") 'haskell-interactive-switch)
@@ -53,12 +56,12 @@
     (define-key evil-normal-state-local-map (kbd "C-c C-n c") 'haskell-process-cabal)
     (define-key evil-normal-state-local-map (kbd "SPC") 'haskell-mode-contextual-space)))
 
-(eval-after-load 'haskell-cabal-mode
+(with-eval-after-load 'haskell-cabal-mode
  '(progn
     (define-key evil-normal-state-local-map (kbd "C-c C-z") 'haskell-interactive-switch)
     (define-key evil-normal-state-local-map (kbd "C-c C-k") 'haskell-interactive-mode-collapse)
     (define-key evil-normal-state-local-map (kbd "C-c C-c") 'haskell-process-cabal-build)
     (define-key evil-normal-state-local-map (kbd "C-c c") 'haskell-process-cabal)))
 
-(provide 'setup-haskell)
+ (provide 'setup-haskell)
 ;;; setup-haskell.el ends here
