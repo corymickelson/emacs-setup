@@ -69,5 +69,5 @@
 (diminish 'typed-clojure-mode)
 (diminish 'clj-refactor-mode)
 
-(provide 'setup-clojure)
-;;; setup-clojure.el ends here
+(provide 'init-clj)
+;;; init-clj ends here

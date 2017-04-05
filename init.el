@@ -25,7 +25,6 @@
               '("melpa-stable" . "http://stable.melpa.org/packages/"))
 
 (add-to-list 'package-pinned-packages '(clj-refactor . "melpa-stable") t)
-(add-to-list 'package-pinned-packages '(intero . "melpa-default") t)
 
 (package-initialize)
 
@@ -34,60 +33,45 @@
 
 (defvar my-packages
   '(
-    ;; Intellisense
-    ;; auto-complete
     company
+    company-quickhelp
+    company-ghc
     flycheck
-    ;; Navigation
-    smex
-    undo-tree
-    flx
-    neotree
-    projectile
-    ido-ubiquitous
-    swiper
-    ;; Editing
-    browse-kill-ring
-    rainbow-delimiters
-    yasnippet
+    flycheck-clojure
     evil
     evil-escape
     evil-iedit-state
+    neotree
+    projectile
+    ido-ubiquitous
+    undo-tree
+    yasnippet
+    rainbow-delimiters
+    browse-kill-ring
+    expand-region
+    multiple-cursors
+    origami
+    flx
+    swiper
     iedit
     indent-guide
     highlight-symbol
     highlight-escape-sequences
     paredit
-    expand-region
-    multiple-cursors
-    origami
-    ;; Javascript
-    js2-mode
     tagedit
-    js2-refactor
-    js-doc
-    json-mode
-    tern-auto-complete
-    web-beautify
-    nodejs-repl
-    ;; Clojure
     epl
     typed-clojure-mode
     cider
     clojure-mode
     clj-refactor
     clojure-mode-extra-font-locking
-    flycheck-clojure
-    ;; Utility
     powerline
     counsel
     exec-path-from-shell
     ag
     wgrep-ag
     fullframe
-    dash-at-point
     diminish
-    ;; Version Control
     git-messenger
     gitignore-mode
     gitconfig-mode
@@ -96,8 +80,9 @@
     diff-hl
     magit
     magit-popup
-    ;; Lisp
     slime
+    slime-company
+    hippie-expand-slime
     ielm
     elisp-slime-nav
     lively
@@ -111,15 +96,7 @@
     highlight-quoted
     eldoc-eval
     ert
-    auto-compile
-    ;; Haskell
-    ghc
-    intero
-    hindent
-    company-ghc
-    elm-mode
-    flycheck-elm
-    haskell-mode))
+    auto-compile))
 
 (if (eq system-type 'darwin)
     (add-to-list 'my-packages 'exec-path-from-shell))
@@ -142,23 +119,38 @@
 ;; a .yml file
 (add-to-list 'load-path "~/.emacs.d/vendor")
 (add-to-list 'load-path "~/.emacs.d/customizations")
+(add-to-list 'load-path "~/.emacs.d/init")
 (add-to-list 'load-path "~/.emacs.d/neotree")
+
 ;; Load sequence matters!!!
+;; loading external modules
 (load "neotree.el")
-(load "web-formatter.el")
-(load "setup-utilities.el")
-(load "editing.el")
-(load "setup-dash.el")
-(load "setup-versioning.el")
-(load "setup-intellisense.el")
-(load "navigation.el")
-(load "elisp-editing.el")
-(load "setup-elm.el")
-(load "setup-clojure.el")
-(load "setup-haskell.el")
-;;(load "setup-js.el")
+;;(load "web-formatter.el")
+;;(load "web-beautify.el")
+
+;; loading editor settings
+(load "init-utility-fns.el")
+(load "init-shell.el")
+(load "init-defaults.el")
+(load "init-fs.el")
+(load "init-buffers.el")
+(load "init-paredit.el")
+(load "init-doc.el")
+(load "init-search.el")
+(load "init-evil.el")
+(load "init-editing-assist.el")
 (load "ui.el")
-(load "setup-evil.el")
+(load "init-vcs.el")
+(load "init-completions.el")
+
+;; loading lisp
+(load "init-lisp-assist.el")
+(load "init-elisp.el")
+(load "init-slime.el")
+(load "init-cl.el")
+
+;; loading clojure
+(load "init-clj.el")
 
 (evil-mode 1)
 (custom-set-variables
@@ -186,7 +178,7 @@
  '(haskell-tags-on-save t)
  '(package-selected-packages
    (quote
-    (flycheck-haskell wgrep-ag ujelly-theme tagedit smex simple-httpd rainbow-delimiters racer projectile magit ido-ubiquitous flycheck-rust flycheck-pos-tip flycheck-clojure exec-path-from-shell evil-iedit-state company-racer company-ghc cm-mode clojure-mode-extra-font-locking clj-refactor auto-complete ample-regexps ag)))
+    (ibuffer-vc slime-company geiser wgrep-ag tagedit smex simple-httpd rainbow-delimiters projectile magit ido-ubiquitous flycheck-pos-tip flycheck-clojure exec-path-from-shell evil-iedit-state cm-mode clojure-mode-extra-font-locking clj-refactor ample-regexps ag)))
  '(safe-local-variable-values
    (quote
     ((no-byte-compile t)
